@@ -20,29 +20,29 @@ Características principales
    * Base de datos SQLite generada por migraciones.
 
 Estructura del proyecto  
-ToDoApp/
-│
-├── Controllers/
-│   └── TodoController.cs        # Lógica de manejo de tareas
-│
-├── Models/
-│   └── TodoItem.cs              # Modelo de datos
-│
-├── Data/
-│   └── ApplicationDbContext.cs  # Configuración EF Core + Identity
-│
-├── Views/
-│   ├── Todo/                    # Vistas CRUD
-│   └── Shared/                  # Layouts y parciales
-│
-├── Areas/
-│   └── Identity/                # Páginas generadas para login/registro
-│
-├── wwwroot/                     # Recursos estáticos (CSS, JS, imágenes)
-│
-├── appsettings.json             # Configuración y cadena de conexión
-│
-└── README.md
+ToDoApp/  
+│  
+├── Controllers/  
+│   └── TodoController.cs        # Lógica de manejo de tareas  
+│  
+├── Models/  
+│   └── TodoItem.cs              # Modelo de datos  
+│  
+├── Data/  
+│   └── ApplicationDbContext.cs  # Configuración EF Core + Identity  
+│  
+├── Views/  
+│   ├── Todo/                    # Vistas CRUD  
+│   └── Shared/                  # Layouts y parciales  
+│  
+├── Areas/  
+│   └── Identity/                # Páginas generadas para login/registro  
+│  
+├── wwwroot/                     # Recursos estáticos (CSS, JS, imágenes)  
+│  
+├── appsettings.json             # Configuración y cadena de conexión  
+│  
+└── README.md  
 
 Tecnologías utilizadas  
    * ASP.NET Core 7.0
@@ -54,21 +54,21 @@ Tecnologías utilizadas
 
 
 Instrucciones para ejecutar el proyecto  
-1. Clonar el repositorio
-   git clone https://github.com/tu-usuario/tu-repo.git
-   cd tu-repo
+1. Clonar el repositorio  
+   git clone https://github.com/tu-usuario/tu-repo.git  
+   cd tu-repo  
 2. Configurar la base de datos  
-Revisar la cadena de conexión en appsettings.json (ya está configurada para SQLite):
-   "ConnectionStrings": {
-     "DefaultConnection": "Data Source=app.db"
-   }
+Revisar la cadena de conexión en appsettings.json (ya está configurada para SQLite):  
+   "ConnectionStrings": {  
+     "DefaultConnection": "Data Source=app.db"  
+   }  
 3. Ejecutar migraciones  
-   dotnet ef database update
-Esto creará app.db.
-4. Ejecutar la aplicación 
-   dotnet run
-Acceder en:
-   http://localhost:5000
+   dotnet ef database update  
+Esto creará app.db.  
+4. Ejecutar la aplicación  
+   dotnet run  
+Acceder en:  
+   http://localhost:5000  
 
 Licencia  
 Este proyecto es de uso académico y puede distribuirse bajo la licencia MIT.

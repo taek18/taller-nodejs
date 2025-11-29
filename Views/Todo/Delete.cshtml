@@ -1,0 +1,16 @@
+@model ToDoApp.Models.TodoItem
+@{
+    ViewData["Title"] = "Eliminar tarea";
+}
+<h2>Eliminar tarea</h2>
+
+<div class="mb-3">
+    <h4>@Model.Titulo</h4>
+    <p>@Model.Descripcion</p>
+    <p><strong>Prioridad:</strong> @Model.Prioridad</p>
+</div>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a class="btn btn-secondary" href="/Todo">Cancelar</a>
+</form>

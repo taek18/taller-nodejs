@@ -1,0 +1,46 @@
+@model IEnumerable<ToDoApp.Models.TodoItem>
+@{
+    ViewData["Title"] = "Mis tareas";
+}
+<h1>Mis tareas</h1>
+
+<form method="get" class="mb-3">
+    <div class="row g-2">
+        <div class="col-auto">
+            <select name="prioridad" class="form-select" onchange="this.form.submit()">
+                <option value="">-- Filtrar por prioridad --</option>
+                <option value="Alta">Alta</option>
+                <option value="Media">Media</option>
+                <option value="Baja">Baja</option>
+            </select>
+        </div>
+        <div class="col-auto">
+            <a class="btn btn-success" href="/Todo/Create">Nueva tarea</a>
+        </div>
+    </div>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Prioridad</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(var t in Model)
+    {
+        <tr>
+            <td>@t.Titulo</td>
+            <td>@t.Prioridad</td>
+            <td>@t.FechaCreacion.ToLocalTime().ToString("yyyy-MM-dd HH:mm")</td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="/Todo/Edit/@t.Id">Editar</a>
+                <a class="btn btn-danger btn-sm" href="/Todo/Delete/@t.Id">Eliminar</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

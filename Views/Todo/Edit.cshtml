@@ -1,0 +1,32 @@
+@model ToDoApp.Models.TodoItem
+@{
+    ViewData["Title"] = "Editar tarea";
+}
+<h2>Editar tarea</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label class="form-label">Título</label>
+        <input asp-for="Titulo" class="form-control" />
+        <span asp-validation-for="Titulo" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Descripción</label>
+        <textarea asp-for="Descripcion" class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Prioridad</label>
+        <select asp-for="Prioridad" class="form-select">
+            <option>Alta</option>
+            <option>Media</option>
+            <option>Baja</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a class="btn btn-secondary" href="/Todo">Cancelar</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
